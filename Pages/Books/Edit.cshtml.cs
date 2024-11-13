@@ -9,9 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Mezei_Adrian_Lab2.Data;
 using Mezei_Adrian_Lab2.Models;
 using NuGet.ProjectModel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Mezei_Adrian_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Mezei_Adrian_Lab2.Data.Mezei_Adrian_Lab2Context _context;
